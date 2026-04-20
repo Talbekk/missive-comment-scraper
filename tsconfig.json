@@ -4,6 +4,7 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "lib": ["ES2023", "dom"],
+    "types": ["node"],
     "skipLibCheck": true,
 
     /* Emit */
