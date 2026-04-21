@@ -8,10 +8,9 @@ interface GetCommentsParams {
 }
 
 export const getComments = async (
-    conversationId: string,
     params: GetCommentsParams = {}
 ): Promise<GetCommentsResponse> => {
-    const url = new URL(`https://public.missiveapp.com/v1/conversations/${conversationId}/comments`);
+    const url = new URL(`https://public.missiveapp.com/v1/conversations/${process.env.CONVERSATION_ID}/comments`);
 
     if (params.limit !== undefined) url.searchParams.set("limit", String(params.limit));
     if (params.until !== undefined) url.searchParams.set("until", String(params.until));

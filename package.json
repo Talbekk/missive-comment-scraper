@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node --strip-types src/index.ts",
+    "start": "node --strip-types --env-file=.env src/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
