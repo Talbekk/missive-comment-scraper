@@ -1,11 +1,22 @@
+export interface MissiveComment {
+    id: string,
+    body: string,
+    mentions: any[],
+    created_at: number,
+    meta: any[],
+    task: any,
+    attachment: any,
+    author: any
+};
+
 interface GetCommentsResponse {
-    comments: Comment[];
-}
+    comments: MissiveComment[];
+};
 
 interface GetCommentsParams {
     limit?: number;
     until?: number;
-}
+};
 
 export const getComments = async (
     params: GetCommentsParams = {}
